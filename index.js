@@ -9,11 +9,50 @@ const base_info = {
         schema: "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
     }
 }
+const authRequest = {
+    "id": "auth",
+    "name": "OAuth",
+    "description": "starter auth request",
+    "request": {
+        "url": {
+            "raw": "https://accounts.spotify.com/authorize",
+            "protocol": "https",
+            "host": ["accounts", "spotify", "com"],
+            "path": ["authorize"],
+            "query": [
+                {
+                    "value": "token",
+                    "key": "response_type",
+                    "description": "REQUIRED",
+                    "type": "String"
+                },
+                {
+                    "value": "https://oauth.pstmn.io/v1/browser-callback",
+                    "key": "redirect_uri",
+                    "description": "REQUIRED",
+                    "type": "String"
+                },
+                {
+                    "value": "",
+                    "key": "client_id",
+                    "description": "REQUIRED",
+                    "type": "String"
+                },
+                {
+                    "value": "",
+                    "key": "scope",
+                    "description": "REQUIRED",
+                    "type": "String"
+                }
+            ]
+        }
+    }
+}
 let page = fs.readFileSync('working.html')
 const $ = cheerio.load(page)
 
 let sections = $('section.category')
-let items = []
+let items = [authRequest]
 sections.each((i,section) => {
     const name = $(section).children().first().text().split(' ')[0].toUpperCase()
     let group_items  = []
