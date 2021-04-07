@@ -1,58 +1,15 @@
 const cheerio = require('cheerio');
 const fs = require('fs');
+const {auth_request, base_info, auth, header} = require('./constants.js')
 
 const spotify_url = "https://developer.spotify.com/documentation/web-api/reference/"
 
-const base_info = {
-    info: {
-        name: "Spotify",
-        schema: "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
-    }
-}
-const authRequest = {
-    "id": "auth",
-    "name": "OAuth",
-    "description": "starter auth request",
-    "request": {
-        "url": {
-            "raw": "https://accounts.spotify.com/authorize",
-            "protocol": "https",
-            "host": ["accounts", "spotify", "com"],
-            "path": ["authorize"],
-            "query": [
-                {
-                    "value": "token",
-                    "key": "response_type",
-                    "description": "REQUIRED",
-                    "type": "String"
-                },
-                {
-                    "value": "https://oauth.pstmn.io/v1/browser-callback",
-                    "key": "redirect_uri",
-                    "description": "REQUIRED",
-                    "type": "String"
-                },
-                {
-                    "value": "",
-                    "key": "client_id",
-                    "description": "REQUIRED",
-                    "type": "String"
-                },
-                {
-                    "value": "",
-                    "key": "scope",
-                    "description": "REQUIRED",
-                    "type": "String"
-                }
-            ]
-        }
-    }
-}
 let page = fs.readFileSync('working.html')
 const $ = cheerio.load(page)
 
 let sections = $('section.category')
-let items = [authRequest]
+let items = [auth_request]
+
 sections.each((i,section) => {
     const name = $(section).children().first().text().split(' ')[0].toUpperCase()
     let group_items  = []
@@ -72,8 +29,8 @@ function build_items(section) {
     const request = $(section).find('.highlight > code').text().trim().split(" ")
     const url = build_url(request[1])
     const queries = table_destructor($(section).find('table[style]'))
-    const method = request[0]
     url.query = queries
+    const method = request[0]
     return {
         id,
         name,
@@ -81,18 +38,8 @@ function build_items(section) {
         request: {
             url,
             method,
-            auth: {
-                type: "bearer",
-                bearer: {
-                    token: "{{bearerToken}}"
-                }
-            },
-            header: [
-                {
-                    key: "Content-Type",
-                    value: "application/json"
-                }
-            ]
+            auth,
+            header
         }
     }
 }
