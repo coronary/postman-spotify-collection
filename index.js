@@ -1,6 +1,6 @@
 const cheerio = require('cheerio');
 const fs = require('fs');
-const {auth_request, base_info, auth, header} = require('./constants.js')
+const {auth_request, base_info, auth, header, host, protocol} = require('./constants.js')
 
 const spotify_url = "https://developer.spotify.com/documentation/web-api/reference/"
 
@@ -47,12 +47,8 @@ function build_items(section) {
 function build_url(url) {
     return {
         raw: url,
-        protocol: "https",
-        host: [
-            'api',
-            'spotify',
-            'com'
-        ],
+        protocol,
+        host,
         path: [
             ...url.slice(url.indexOf('m/')).split('/').slice(1)
         ],

@@ -57,9 +57,14 @@ header = [
     value: "application/json",
   },
 ];
+host = ["api", "spotify", "com"];
+protocol = "https";
+
 module.exports = {
   auth_request,
   base_info,
   auth,
-  header
+  header,
+  host,
+  protocol
 };
