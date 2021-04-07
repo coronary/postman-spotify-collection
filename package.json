@@ -11,5 +11,8 @@
   "license": "ISC",
   "dependencies": {
     "cheerio": "*"
+  },
+  "devDependencies": {
+    "prettier": "^2.2.1"
   }
 }
