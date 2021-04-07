@@ -10,7 +10,7 @@ const $ = cheerio.load(page)
 let sections = $('section.category')
 let items = [auth_request]
 
-sections.each((i,section) => {
+sections.each((_,section) => {
     const name = $(section).children().first().text().split(' ')[0].toUpperCase()
     let group_items  = []
     $(section).find('section.endpoint').each((i, endpoint) => {
@@ -54,12 +54,12 @@ function build_url(url) {
         ],
         query: []
     }
-    
 }
+
 function table_destructor(table) {
     const queries = table.last().find('tbody > tr')
     let qs = []
-    queries.each((i, row) => {
+    queries.each((_, row) => {
         let query = {disabled:{type:"boolean",default:false}}
         $(row).children().each((x, column) => {
             query.value = ''
