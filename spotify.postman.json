@@ -22,14 +22,14 @@
                   "disabled": { "type": "boolean", "default": false },
                   "value": "",
                   "key": "ids",
-                  "description": "A comma-separated list of the Spotify IDs for the albums. Maximum: 20 IDs.",
+                  "description": "REQUIRED A comma-separated list of the Spotify IDs for the albums. Maximum: 20 IDs.",
                   "type": "String"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "market",
-                  "description": "An ISO 3166-1 alpha-2 country code or the string from_token.\nProvide this parameter if you want to apply Track Relinking.",
+                  "description": "OPTIONAL An ISO 3166-1 alpha-2 country code or the string from_token.\nProvide this parameter if you want to apply Track Relinking.",
                   "type": "String"
                 }
               ]
@@ -57,7 +57,7 @@
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "market",
-                  "description": "The market you’d like to request. Synonym for country.",
+                  "description": "OPTIONAL The market you’d like to request. Synonym for country.",
                   "type": "String"
                 }
               ]
@@ -85,21 +85,21 @@
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "market",
-                  "description": "An ISO 3166-1 alpha-2 country code or the string from_token.\nProvide this parameter if you want to apply Track Relinking.",
+                  "description": "OPTIONAL An ISO 3166-1 alpha-2 country code or the string from_token.\nProvide this parameter if you want to apply Track Relinking.",
                   "type": "String"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "limit",
-                  "description": "The maximum number of tracks to return. Default: 20. Minimum: 1. Maximum: 50.",
+                  "description": "OPTIONAL The maximum number of tracks to return. Default: 20. Minimum: 1. Maximum: 50.",
                   "type": "Integer"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "offset",
-                  "description": "The index of the first track to return. Default: 0 (the first object). Use with limit to get the next set of tracks.",
+                  "description": "OPTIONAL The index of the first track to return. Default: 0 (the first object). Use with limit to get the next set of tracks.",
                   "type": "Integer"
                 }
               ]
@@ -132,7 +132,7 @@
                   "disabled": { "type": "boolean", "default": false },
                   "value": "",
                   "key": "ids",
-                  "description": "A comma-separated list of the Spotify IDs for the artists. Maximum: 50 IDs.",
+                  "description": "REQUIRED A comma-separated list of the Spotify IDs for the artists. Maximum: 50 IDs.",
                   "type": "String"
                 }
               ]
@@ -160,7 +160,7 @@
                   "disabled": { "type": "boolean", "default": false },
                   "value": "",
                   "key": "{id}",
-                  "description": "The Spotify ID of the artist.",
+                  "description": "REQUIRED The Spotify ID of the artist.",
                   "type": "String"
                 }
               ]
@@ -188,7 +188,7 @@
                   "disabled": { "type": "boolean", "default": false },
                   "value": "",
                   "key": "market",
-                  "description": "An ISO 3166-1 alpha-2 country code or the string from_token. Synonym for country.",
+                  "description": "REQUIRED An ISO 3166-1 alpha-2 country code or the string from_token. Synonym for country.",
                   "type": "String"
                 }
               ]
@@ -216,7 +216,7 @@
                   "disabled": { "type": "boolean", "default": false },
                   "value": "",
                   "key": "{id}",
-                  "description": "The Spotify ID for the artist",
+                  "description": "REQUIRED The Spotify ID for the artist",
                   "type": "String"
                 }
               ]
@@ -244,28 +244,28 @@
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "include_groups",
-                  "description": "A comma-separated list of keywords that will be used to filter the response. If not supplied, all album types will be returned. Valid values are:- album- single- appears_on- compilationFor example: include_groups=album,single.",
+                  "description": "OPTIONAL A comma-separated list of keywords that will be used to filter the response. If not supplied, all album types will be returned. Valid values are:- album- single- appears_on- compilationFor example: include_groups=album,single.",
                   "type": "String"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "market",
-                  "description": "Synonym for country. An ISO 3166-1 alpha-2 country code or the string from_token.Supply this parameter to limit the response to one particular geographical market. For example, for albums available in Sweden: market=SE.If not given, results will be returned for all markets and you are likely to get duplicate results per album, one for each market in which the album is available!",
+                  "description": "OPTIONAL Synonym for country. An ISO 3166-1 alpha-2 country code or the string from_token.Supply this parameter to limit the response to one particular geographical market. For example, for albums available in Sweden: market=SE.If not given, results will be returned for all markets and you are likely to get duplicate results per album, one for each market in which the album is available!",
                   "type": "String"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "limit",
-                  "description": "The number of album objects to return. Default: 20. Minimum: 1. Maximum: 50. For example: limit=2",
+                  "description": "OPTIONAL The number of album objects to return. Default: 20. Minimum: 1. Maximum: 50. For example: limit=2",
                   "type": "Integer"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "offset",
-                  "description": "The index of the first album to return. Default: 0 (i.e., the first album). Use with limit to get the next set of albums.",
+                  "description": "OPTIONAL The index of the first album to return. Default: 0 (i.e., the first album). Use with limit to get the next set of albums.",
                   "type": "Integer"
                 }
               ]
@@ -298,21 +298,21 @@
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "country",
-                  "description": "A country: an ISO 3166-1 alpha-2 country code. Provide this parameter if you want the list of returned items to be relevant to a particular country. If omitted, the returned items will be relevant to all countries.",
+                  "description": "OPTIONAL A country: an ISO 3166-1 alpha-2 country code. Provide this parameter if you want the list of returned items to be relevant to a particular country. If omitted, the returned items will be relevant to all countries.",
                   "type": "String"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "limit",
-                  "description": "The maximum number of items to return. Default: 20. Minimum: 1. Maximum: 50.",
+                  "description": "OPTIONAL The maximum number of items to return. Default: 20. Minimum: 1. Maximum: 50.",
                   "type": "Integer"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "offset",
-                  "description": "The index of the first item to return. Default: 0 (the first object). Use with limit to get the next set of items.",
+                  "description": "OPTIONAL The index of the first item to return. Default: 0 (the first object). Use with limit to get the next set of items.",
                   "type": "Integer"
                 }
               ]
@@ -340,35 +340,35 @@
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "country",
-                  "description": "A country: an ISO 3166-1 alpha-2 country code. Provide this parameter if you want the list of returned items to be relevant to a particular country. If omitted, the returned items will be relevant to all countries.",
+                  "description": "OPTIONAL A country: an ISO 3166-1 alpha-2 country code. Provide this parameter if you want the list of returned items to be relevant to a particular country. If omitted, the returned items will be relevant to all countries.",
                   "type": "String"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "locale",
-                  "description": "The desired language, consisting of a lowercase ISO 639-1 language code and an uppercase ISO 3166-1 alpha-2 country code, joined by an underscore. For example: es_MX, meaning “Spanish (Mexico)”. Provide this parameter if you want the results returned in a particular language (where available). Note that, if locale is not supplied, or if the specified language is not available, all strings will be returned in the Spotify default language (American English). The locale parameter, combined with the country parameter, may give odd results if not carefully matched. For example country=SE&locale=de_DE will return a list of categories relevant to Sweden but as German language strings.",
+                  "description": "OPTIONAL The desired language, consisting of a lowercase ISO 639-1 language code and an uppercase ISO 3166-1 alpha-2 country code, joined by an underscore. For example: es_MX, meaning “Spanish (Mexico)”. Provide this parameter if you want the results returned in a particular language (where available). Note that, if locale is not supplied, or if the specified language is not available, all strings will be returned in the Spotify default language (American English). The locale parameter, combined with the country parameter, may give odd results if not carefully matched. For example country=SE&locale=de_DE will return a list of categories relevant to Sweden but as German language strings.",
                   "type": "String"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "timestamp",
-                  "description": "A timestamp in ISO 8601 format: yyyy-MM-ddTHH:mm:ss. Use this parameter to specify the user’s local time to get results tailored for that specific date and time in the day. If not provided, the response defaults to the current UTC time. Example: “2014-10-23T09:00:00” for a user whose local time is 9AM. If there were no featured playlists (or there is no data) at the specified time, the response will revert to the current UTC time.",
+                  "description": "OPTIONAL A timestamp in ISO 8601 format: yyyy-MM-ddTHH:mm:ss. Use this parameter to specify the user’s local time to get results tailored for that specific date and time in the day. If not provided, the response defaults to the current UTC time. Example: “2014-10-23T09:00:00” for a user whose local time is 9AM. If there were no featured playlists (or there is no data) at the specified time, the response will revert to the current UTC time.",
                   "type": "String"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "limit",
-                  "description": "The maximum number of items to return. Default: 20. Minimum: 1. Maximum: 50.",
+                  "description": "OPTIONAL The maximum number of items to return. Default: 20. Minimum: 1. Maximum: 50.",
                   "type": "Integer"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "offset",
-                  "description": "The index of the first item to return. Default: 0 (the first object). Use with limit to get the next set of items.",
+                  "description": "OPTIONAL The index of the first item to return. Default: 0 (the first object). Use with limit to get the next set of items.",
                   "type": "Integer"
                 }
               ]
@@ -396,28 +396,28 @@
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "country",
-                  "description": "A country: an ISO 3166-1 alpha-2 country code. Provide this parameter if you want to narrow the list of returned categories to those relevant to a particular country. If omitted, the returned items will be globally relevant.",
+                  "description": "OPTIONAL A country: an ISO 3166-1 alpha-2 country code. Provide this parameter if you want to narrow the list of returned categories to those relevant to a particular country. If omitted, the returned items will be globally relevant.",
                   "type": "String"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "locale",
-                  "description": "The desired language, consisting of an ISO 639-1 language code and an ISO 3166-1 alpha-2 country code, joined by an underscore. For example: es_MX, meaning “Spanish (Mexico)”. Provide this parameter if you want the category metadata returned in a particular language. Note that, if locale is not supplied, or if the specified language is not available, all strings will be returned in the Spotify default language (American English). The locale parameter, combined with the country parameter, may give odd results if not carefully matched. For example country=SE&locale=de_DE will return a list of categories relevant to Sweden but as German language strings.",
+                  "description": "OPTIONAL The desired language, consisting of an ISO 639-1 language code and an ISO 3166-1 alpha-2 country code, joined by an underscore. For example: es_MX, meaning “Spanish (Mexico)”. Provide this parameter if you want the category metadata returned in a particular language. Note that, if locale is not supplied, or if the specified language is not available, all strings will be returned in the Spotify default language (American English). The locale parameter, combined with the country parameter, may give odd results if not carefully matched. For example country=SE&locale=de_DE will return a list of categories relevant to Sweden but as German language strings.",
                   "type": "String"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "limit",
-                  "description": "The maximum number of categories to return. Default: 20. Minimum: 1. Maximum: 50.",
+                  "description": "OPTIONAL The maximum number of categories to return. Default: 20. Minimum: 1. Maximum: 50.",
                   "type": "Integer"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "offset",
-                  "description": "The index of the first item to return. Default: 0 (the first object). Use with limit to get the next set of categories.",
+                  "description": "OPTIONAL The index of the first item to return. Default: 0 (the first object). Use with limit to get the next set of categories.",
                   "type": "Integer"
                 }
               ]
@@ -445,14 +445,14 @@
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "country",
-                  "description": "A country: an ISO 3166-1 alpha-2 country code. Provide this parameter to ensure that the category exists for a particular country.",
+                  "description": "OPTIONAL A country: an ISO 3166-1 alpha-2 country code. Provide this parameter to ensure that the category exists for a particular country.",
                   "type": "String"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "locale",
-                  "description": "The desired language, consisting of an ISO 639-1 language code and an ISO 3166-1 alpha-2 country code, joined by an underscore. For example: es_MX, meaning \"Spanish (Mexico)\". Provide this parameter if you want the category strings returned in a particular language. Note that, if locale is not supplied, or if the specified language is not available, the category strings returned will be in the Spotify default language (American English).",
+                  "description": "OPTIONAL The desired language, consisting of an ISO 639-1 language code and an ISO 3166-1 alpha-2 country code, joined by an underscore. For example: es_MX, meaning \"Spanish (Mexico)\". Provide this parameter if you want the category strings returned in a particular language. Note that, if locale is not supplied, or if the specified language is not available, the category strings returned will be in the Spotify default language (American English).",
                   "type": "String"
                 }
               ]
@@ -486,21 +486,21 @@
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "country",
-                  "description": "A country: an ISO 3166-1 alpha-2 country code. Provide this parameter to ensure that the category exists for a particular country.",
+                  "description": "OPTIONAL A country: an ISO 3166-1 alpha-2 country code. Provide this parameter to ensure that the category exists for a particular country.",
                   "type": "String"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "limit",
-                  "description": "The maximum number of items to return. Default: 20. Minimum: 1. Maximum: 50.",
+                  "description": "OPTIONAL The maximum number of items to return. Default: 20. Minimum: 1. Maximum: 50.",
                   "type": "Integer"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "offset",
-                  "description": "The index of the first item to return. Default: 0 (the first object). Use with limit to get the next set of items.",
+                  "description": "OPTIONAL The index of the first item to return. Default: 0 (the first object). Use with limit to get the next set of items.",
                   "type": "Integer"
                 }
               ]
@@ -528,329 +528,329 @@
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "limit",
-                  "description": "The target size of the list of recommended tracks. For seeds with unusually small pools or when highly restrictive filtering is applied, it may be impossible to generate the requested number of recommended tracks. Debugging information for such cases is available in the response. Default: 20. Minimum: 1. Maximum: 100.",
+                  "description": "OPTIONAL The target size of the list of recommended tracks. For seeds with unusually small pools or when highly restrictive filtering is applied, it may be impossible to generate the requested number of recommended tracks. Debugging information for such cases is available in the response. Default: 20. Minimum: 1. Maximum: 100.",
                   "type": "Integer"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "market",
-                  "description": "An ISO 3166-1 alpha-2 country code or the string from_token. Provide this parameter if you want to apply Track Relinking. Because min_*, max_* and target_* are applied to pools before relinking, the generated results may not precisely match the filters applied. Original, non-relinked tracks are available via the linked_from attribute of the relinked track response.",
+                  "description": "OPTIONAL An ISO 3166-1 alpha-2 country code or the string from_token. Provide this parameter if you want to apply Track Relinking. Because min_*, max_* and target_* are applied to pools before relinking, the generated results may not precisely match the filters applied. Original, non-relinked tracks are available via the linked_from attribute of the relinked track response.",
                   "type": "String"
                 },
                 {
                   "disabled": { "type": "boolean", "default": false },
                   "value": "",
                   "key": "seed_artists",
-                  "description": "A comma separated list of Spotify IDs for seed artists.  Up to 5 seed values may be provided in any combination of seed_artists, seed_tracks and seed_genres.",
+                  "description": "REQUIRED A comma separated list of Spotify IDs for seed artists.  Up to 5 seed values may be provided in any combination of seed_artists, seed_tracks and seed_genres.",
                   "type": "String"
                 },
                 {
                   "disabled": { "type": "boolean", "default": false },
                   "value": "",
                   "key": "seed_genres",
-                  "description": "A comma separated list of any genres in the set of available genre seeds.  Up to 5 seed values may be provided in any combination of seed_artists, seed_tracks and seed_genres.",
+                  "description": "REQUIRED A comma separated list of any genres in the set of available genre seeds.  Up to 5 seed values may be provided in any combination of seed_artists, seed_tracks and seed_genres.",
                   "type": "String"
                 },
                 {
                   "disabled": { "type": "boolean", "default": false },
                   "value": "",
                   "key": "seed_tracks",
-                  "description": "A comma separated list of Spotify IDs for a seed track.  Up to 5 seed values may be provided in any combination of seed_artists, seed_tracks and seed_genres.",
+                  "description": "REQUIRED A comma separated list of Spotify IDs for a seed track.  Up to 5 seed values may be provided in any combination of seed_artists, seed_tracks and seed_genres.",
                   "type": "String"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "min_acousticness",
-                  "description": "For each tunable track attribute, a hard floor on the selected track attribute’s value can be provided. See tunable track attributes below for the list of available options. For example, min_tempo=140 would restrict results to only those tracks with a tempo of greater than 140 beats per minute.",
+                  "description": "OPTIONAL For each tunable track attribute, a hard floor on the selected track attribute’s value can be provided. See tunable track attributes below for the list of available options. For example, min_tempo=140 would restrict results to only those tracks with a tempo of greater than 140 beats per minute.",
                   "type": "Number"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "max_acousticness",
-                  "description": "For each tunable track attribute, a hard ceiling on the selected track attribute’s value can be provided. See tunable track attributes below for the list of available options. For example, max_instrumentalness=0.35 would filter out most tracks that are likely to be instrumental.",
+                  "description": "OPTIONAL For each tunable track attribute, a hard ceiling on the selected track attribute’s value can be provided. See tunable track attributes below for the list of available options. For example, max_instrumentalness=0.35 would filter out most tracks that are likely to be instrumental.",
                   "type": "Number"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "target_acousticness",
-                  "description": "For each of the tunable track attributes (below) a target value may be provided. Tracks with the attribute values nearest to the target values will be preferred. For example, you might request target_energy=0.6 and target_danceability=0.8. All target values will be weighed equally in ranking results.",
+                  "description": "OPTIONAL For each of the tunable track attributes (below) a target value may be provided. Tracks with the attribute values nearest to the target values will be preferred. For example, you might request target_energy=0.6 and target_danceability=0.8. All target values will be weighed equally in ranking results.",
                   "type": "Number"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "min_danceability",
-                  "description": "For each tunable track attribute, a hard floor on the selected track attribute’s value can be provided. See tunable track attributes below for the list of available options. For example, min_tempo=140 would restrict results to only those tracks with a tempo of greater than 140 beats per minute.",
+                  "description": "OPTIONAL For each tunable track attribute, a hard floor on the selected track attribute’s value can be provided. See tunable track attributes below for the list of available options. For example, min_tempo=140 would restrict results to only those tracks with a tempo of greater than 140 beats per minute.",
                   "type": "Number"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "max_danceability",
-                  "description": "For each tunable track attribute, a hard ceiling on the selected track attribute’s value can be provided. See tunable track attributes below for the list of available options. For example, max_instrumentalness=0.35 would filter out most tracks that are likely to be instrumental.",
+                  "description": "OPTIONAL For each tunable track attribute, a hard ceiling on the selected track attribute’s value can be provided. See tunable track attributes below for the list of available options. For example, max_instrumentalness=0.35 would filter out most tracks that are likely to be instrumental.",
                   "type": "Number"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "target_danceability",
-                  "description": "For each of the tunable track attributes (below) a target value may be provided. Tracks with the attribute values nearest to the target values will be preferred. For example, you might request target_energy=0.6 and target_danceability=0.8. All target values will be weighed equally in ranking results.",
+                  "description": "OPTIONAL For each of the tunable track attributes (below) a target value may be provided. Tracks with the attribute values nearest to the target values will be preferred. For example, you might request target_energy=0.6 and target_danceability=0.8. All target values will be weighed equally in ranking results.",
                   "type": "Number"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "min_duration_ms",
-                  "description": "For each tunable track attribute, a hard floor on the selected track attribute’s value can be provided. See tunable track attributes below for the list of available options. For example, min_tempo=140 would restrict results to only those tracks with a tempo of greater than 140 beats per minute.",
+                  "description": "OPTIONAL For each tunable track attribute, a hard floor on the selected track attribute’s value can be provided. See tunable track attributes below for the list of available options. For example, min_tempo=140 would restrict results to only those tracks with a tempo of greater than 140 beats per minute.",
                   "type": "Integer"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "max_duration_ms",
-                  "description": "For each tunable track attribute, a hard ceiling on the selected track attribute’s value can be provided. See tunable track attributes below for the list of available options. For example, max_instrumentalness=0.35 would filter out most tracks that are likely to be instrumental.",
+                  "description": "OPTIONAL For each tunable track attribute, a hard ceiling on the selected track attribute’s value can be provided. See tunable track attributes below for the list of available options. For example, max_instrumentalness=0.35 would filter out most tracks that are likely to be instrumental.",
                   "type": "Integer"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "target_duration_ms",
-                  "description": "Target duration of the track (ms)",
+                  "description": "OPTIONAL Target duration of the track (ms)",
                   "type": "Integer"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "min_energy",
-                  "description": "For each tunable track attribute, a hard floor on the selected track attribute’s value can be provided. See tunable track attributes below for the list of available options. For example, min_tempo=140 would restrict results to only those tracks with a tempo of greater than 140 beats per minute.",
+                  "description": "OPTIONAL For each tunable track attribute, a hard floor on the selected track attribute’s value can be provided. See tunable track attributes below for the list of available options. For example, min_tempo=140 would restrict results to only those tracks with a tempo of greater than 140 beats per minute.",
                   "type": "Number"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "max_energy",
-                  "description": "For each tunable track attribute, a hard ceiling on the selected track attribute’s value can be provided. See tunable track attributes below for the list of available options. For example, max_instrumentalness=0.35 would filter out most tracks that are likely to be instrumental.",
+                  "description": "OPTIONAL For each tunable track attribute, a hard ceiling on the selected track attribute’s value can be provided. See tunable track attributes below for the list of available options. For example, max_instrumentalness=0.35 would filter out most tracks that are likely to be instrumental.",
                   "type": "Number"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "target_energy",
-                  "description": "For each of the tunable track attributes (below) a target value may be provided. Tracks with the attribute values nearest to the target values will be preferred. For example, you might request target_energy=0.6 and target_danceability=0.8. All target values will be weighed equally in ranking results.",
+                  "description": "OPTIONAL For each of the tunable track attributes (below) a target value may be provided. Tracks with the attribute values nearest to the target values will be preferred. For example, you might request target_energy=0.6 and target_danceability=0.8. All target values will be weighed equally in ranking results.",
                   "type": "Number"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "min_instrumentalness",
-                  "description": "For each tunable track attribute, a hard floor on the selected track attribute’s value can be provided. See tunable track attributes below for the list of available options. For example, min_tempo=140 would restrict results to only those tracks with a tempo of greater than 140 beats per minute.",
+                  "description": "OPTIONAL For each tunable track attribute, a hard floor on the selected track attribute’s value can be provided. See tunable track attributes below for the list of available options. For example, min_tempo=140 would restrict results to only those tracks with a tempo of greater than 140 beats per minute.",
                   "type": "Number"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "max_instrumentalness",
-                  "description": "For each tunable track attribute, a hard ceiling on the selected track attribute’s value can be provided. See tunable track attributes below for the list of available options. For example, max_instrumentalness=0.35 would filter out most tracks that are likely to be instrumental.",
+                  "description": "OPTIONAL For each tunable track attribute, a hard ceiling on the selected track attribute’s value can be provided. See tunable track attributes below for the list of available options. For example, max_instrumentalness=0.35 would filter out most tracks that are likely to be instrumental.",
                   "type": "Number"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "target_instrumentalness",
-                  "description": "For each of the tunable track attributes (below) a target value may be provided. Tracks with the attribute values nearest to the target values will be preferred. For example, you might request target_energy=0.6 and target_danceability=0.8. All target values will be weighed equally in ranking results.",
+                  "description": "OPTIONAL For each of the tunable track attributes (below) a target value may be provided. Tracks with the attribute values nearest to the target values will be preferred. For example, you might request target_energy=0.6 and target_danceability=0.8. All target values will be weighed equally in ranking results.",
                   "type": "Number"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "min_key",
-                  "description": "For each tunable track attribute, a hard floor on the selected track attribute’s value can be provided. See tunable track attributes below for the list of available options. For example, min_tempo=140 would restrict results to only those tracks with a tempo of greater than 140 beats per minute.",
+                  "description": "OPTIONAL For each tunable track attribute, a hard floor on the selected track attribute’s value can be provided. See tunable track attributes below for the list of available options. For example, min_tempo=140 would restrict results to only those tracks with a tempo of greater than 140 beats per minute.",
                   "type": "Integer"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "max_key",
-                  "description": "For each tunable track attribute, a hard ceiling on the selected track attribute’s value can be provided. See tunable track attributes below for the list of available options. For example, max_instrumentalness=0.35 would filter out most tracks that are likely to be instrumental.",
+                  "description": "OPTIONAL For each tunable track attribute, a hard ceiling on the selected track attribute’s value can be provided. See tunable track attributes below for the list of available options. For example, max_instrumentalness=0.35 would filter out most tracks that are likely to be instrumental.",
                   "type": "Integer"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "target_key",
-                  "description": "For each of the tunable track attributes (below) a target value may be provided. Tracks with the attribute values nearest to the target values will be preferred. For example, you might request target_energy=0.6 and target_danceability=0.8. All target values will be weighed equally in ranking results.",
+                  "description": "OPTIONAL For each of the tunable track attributes (below) a target value may be provided. Tracks with the attribute values nearest to the target values will be preferred. For example, you might request target_energy=0.6 and target_danceability=0.8. All target values will be weighed equally in ranking results.",
                   "type": "Integer"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "min_liveness",
-                  "description": "For each tunable track attribute, a hard floor on the selected track attribute’s value can be provided. See tunable track attributes below for the list of available options. For example, min_tempo=140 would restrict results to only those tracks with a tempo of greater than 140 beats per minute.",
+                  "description": "OPTIONAL For each tunable track attribute, a hard floor on the selected track attribute’s value can be provided. See tunable track attributes below for the list of available options. For example, min_tempo=140 would restrict results to only those tracks with a tempo of greater than 140 beats per minute.",
                   "type": "Number"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "max_liveness",
-                  "description": "For each tunable track attribute, a hard ceiling on the selected track attribute’s value can be provided. See tunable track attributes below for the list of available options. For example, max_instrumentalness=0.35 would filter out most tracks that are likely to be instrumental.",
+                  "description": "OPTIONAL For each tunable track attribute, a hard ceiling on the selected track attribute’s value can be provided. See tunable track attributes below for the list of available options. For example, max_instrumentalness=0.35 would filter out most tracks that are likely to be instrumental.",
                   "type": "Number"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "target_liveness",
-                  "description": "For each of the tunable track attributes (below) a target value may be provided. Tracks with the attribute values nearest to the target values will be preferred. For example, you might request target_energy=0.6 and target_danceability=0.8. All target values will be weighed equally in ranking results.",
+                  "description": "OPTIONAL For each of the tunable track attributes (below) a target value may be provided. Tracks with the attribute values nearest to the target values will be preferred. For example, you might request target_energy=0.6 and target_danceability=0.8. All target values will be weighed equally in ranking results.",
                   "type": "Number"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "min_loudness",
-                  "description": "For each tunable track attribute, a hard floor on the selected track attribute’s value can be provided. See tunable track attributes below for the list of available options. For example, min_tempo=140 would restrict results to only those tracks with a tempo of greater than 140 beats per minute.",
+                  "description": "OPTIONAL For each tunable track attribute, a hard floor on the selected track attribute’s value can be provided. See tunable track attributes below for the list of available options. For example, min_tempo=140 would restrict results to only those tracks with a tempo of greater than 140 beats per minute.",
                   "type": "Number"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "max_loudness",
-                  "description": "For each tunable track attribute, a hard ceiling on the selected track attribute’s value can be provided. See tunable track attributes below for the list of available options. For example, max_instrumentalness=0.35 would filter out most tracks that are likely to be instrumental.",
+                  "description": "OPTIONAL For each tunable track attribute, a hard ceiling on the selected track attribute’s value can be provided. See tunable track attributes below for the list of available options. For example, max_instrumentalness=0.35 would filter out most tracks that are likely to be instrumental.",
                   "type": "Number"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "target_loudness",
-                  "description": "For each of the tunable track attributes (below) a target value may be provided. Tracks with the attribute values nearest to the target values will be preferred. For example, you might request target_energy=0.6 and target_danceability=0.8. All target values will be weighed equally in ranking results.",
+                  "description": "OPTIONAL For each of the tunable track attributes (below) a target value may be provided. Tracks with the attribute values nearest to the target values will be preferred. For example, you might request target_energy=0.6 and target_danceability=0.8. All target values will be weighed equally in ranking results.",
                   "type": "Number"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "min_mode",
-                  "description": "For each tunable track attribute, a hard floor on the selected track attribute’s value can be provided. See tunable track attributes below for the list of available options. For example, min_tempo=140 would restrict results to only those tracks with a tempo of greater than 140 beats per minute.",
+                  "description": "OPTIONAL For each tunable track attribute, a hard floor on the selected track attribute’s value can be provided. See tunable track attributes below for the list of available options. For example, min_tempo=140 would restrict results to only those tracks with a tempo of greater than 140 beats per minute.",
                   "type": "Integer"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "max_mode",
-                  "description": "For each tunable track attribute, a hard ceiling on the selected track attribute’s value can be provided. See tunable track attributes below for the list of available options. For example, max_instrumentalness=0.35 would filter out most tracks that are likely to be instrumental.",
+                  "description": "OPTIONAL For each tunable track attribute, a hard ceiling on the selected track attribute’s value can be provided. See tunable track attributes below for the list of available options. For example, max_instrumentalness=0.35 would filter out most tracks that are likely to be instrumental.",
                   "type": "Integer"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "target_mode",
-                  "description": "For each of the tunable track attributes (below) a target value may be provided. Tracks with the attribute values nearest to the target values will be preferred. For example, you might request target_energy=0.6 and target_danceability=0.8. All target values will be weighed equally in ranking results.",
+                  "description": "OPTIONAL For each of the tunable track attributes (below) a target value may be provided. Tracks with the attribute values nearest to the target values will be preferred. For example, you might request target_energy=0.6 and target_danceability=0.8. All target values will be weighed equally in ranking results.",
                   "type": "Integer"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "min_popularity",
-                  "description": "For each tunable track attribute, a hard floor on the selected track attribute’s value can be provided. See tunable track attributes below for the list of available options. For example, min_tempo=140 would restrict results to only those tracks with a tempo of greater than 140 beats per minute.",
+                  "description": "OPTIONAL For each tunable track attribute, a hard floor on the selected track attribute’s value can be provided. See tunable track attributes below for the list of available options. For example, min_tempo=140 would restrict results to only those tracks with a tempo of greater than 140 beats per minute.",
                   "type": "Integer"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "max_popularity",
-                  "description": "For each tunable track attribute, a hard ceiling on the selected track attribute’s value can be provided. See tunable track attributes below for the list of available options. For example, max_instrumentalness=0.35 would filter out most tracks that are likely to be instrumental.",
+                  "description": "OPTIONAL For each tunable track attribute, a hard ceiling on the selected track attribute’s value can be provided. See tunable track attributes below for the list of available options. For example, max_instrumentalness=0.35 would filter out most tracks that are likely to be instrumental.",
                   "type": "Integer"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "target_popularity",
-                  "description": "For each of the tunable track attributes (below) a target value may be provided. Tracks with the attribute values nearest to the target values will be preferred. For example, you might request target_energy=0.6 and target_danceability=0.8. All target values will be weighed equally in ranking results.",
+                  "description": "OPTIONAL For each of the tunable track attributes (below) a target value may be provided. Tracks with the attribute values nearest to the target values will be preferred. For example, you might request target_energy=0.6 and target_danceability=0.8. All target values will be weighed equally in ranking results.",
                   "type": "Integer"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "min_speechiness",
-                  "description": "For each tunable track attribute, a hard floor on the selected track attribute’s value can be provided. See tunable track attributes below for the list of available options. For example, min_tempo=140 would restrict results to only those tracks with a tempo of greater than 140 beats per minute.",
+                  "description": "OPTIONAL For each tunable track attribute, a hard floor on the selected track attribute’s value can be provided. See tunable track attributes below for the list of available options. For example, min_tempo=140 would restrict results to only those tracks with a tempo of greater than 140 beats per minute.",
                   "type": "Number"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "max_speechiness",
-                  "description": "For each tunable track attribute, a hard ceiling on the selected track attribute’s value can be provided. See tunable track attributes below for the list of available options. For example, max_instrumentalness=0.35 would filter out most tracks that are likely to be instrumental.",
+                  "description": "OPTIONAL For each tunable track attribute, a hard ceiling on the selected track attribute’s value can be provided. See tunable track attributes below for the list of available options. For example, max_instrumentalness=0.35 would filter out most tracks that are likely to be instrumental.",
                   "type": "Number"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "target_speechiness",
-                  "description": "For each of the tunable track attributes (below) a target value may be provided. Tracks with the attribute values nearest to the target values will be preferred. For example, you might request target_energy=0.6 and target_danceability=0.8. All target values will be weighed equally in ranking results.",
+                  "description": "OPTIONAL For each of the tunable track attributes (below) a target value may be provided. Tracks with the attribute values nearest to the target values will be preferred. For example, you might request target_energy=0.6 and target_danceability=0.8. All target values will be weighed equally in ranking results.",
                   "type": "Number"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "min_tempo",
-                  "description": "For each tunable track attribute, a hard floor on the selected track attribute’s value can be provided. See tunable track attributes below for the list of available options. For example, min_tempo=140 would restrict results to only those tracks with a tempo of greater than 140 beats per minute.",
+                  "description": "OPTIONAL For each tunable track attribute, a hard floor on the selected track attribute’s value can be provided. See tunable track attributes below for the list of available options. For example, min_tempo=140 would restrict results to only those tracks with a tempo of greater than 140 beats per minute.",
                   "type": "Number"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "max_tempo",
-                  "description": "For each tunable track attribute, a hard ceiling on the selected track attribute’s value can be provided. See tunable track attributes below for the list of available options. For example, max_instrumentalness=0.35 would filter out most tracks that are likely to be instrumental.",
+                  "description": "OPTIONAL For each tunable track attribute, a hard ceiling on the selected track attribute’s value can be provided. See tunable track attributes below for the list of available options. For example, max_instrumentalness=0.35 would filter out most tracks that are likely to be instrumental.",
                   "type": "Number"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "target_tempo",
-                  "description": "Target tempo (BPM)",
+                  "description": "OPTIONAL Target tempo (BPM)",
                   "type": "Number"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "min_time_signature",
-                  "description": "For each tunable track attribute, a hard floor on the selected track attribute’s value can be provided. See tunable track attributes below for the list of available options. For example, min_tempo=140 would restrict results to only those tracks with a tempo of greater than 140 beats per minute.",
+                  "description": "OPTIONAL For each tunable track attribute, a hard floor on the selected track attribute’s value can be provided. See tunable track attributes below for the list of available options. For example, min_tempo=140 would restrict results to only those tracks with a tempo of greater than 140 beats per minute.",
                   "type": "Integer"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "max_time_signature",
-                  "description": "For each tunable track attribute, a hard ceiling on the selected track attribute’s value can be provided. See tunable track attributes below for the list of available options. For example, max_instrumentalness=0.35 would filter out most tracks that are likely to be instrumental.",
+                  "description": "OPTIONAL For each tunable track attribute, a hard ceiling on the selected track attribute’s value can be provided. See tunable track attributes below for the list of available options. For example, max_instrumentalness=0.35 would filter out most tracks that are likely to be instrumental.",
                   "type": "Integer"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "target_time_signature",
-                  "description": "For each of the tunable track attributes (below) a target value may be provided. Tracks with the attribute values nearest to the target values will be preferred. For example, you might request target_energy=0.6 and target_danceability=0.8. All target values will be weighed equally in ranking results.",
+                  "description": "OPTIONAL For each of the tunable track attributes (below) a target value may be provided. Tracks with the attribute values nearest to the target values will be preferred. For example, you might request target_energy=0.6 and target_danceability=0.8. All target values will be weighed equally in ranking results.",
                   "type": "Integer"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "min_valence",
-                  "description": "For each tunable track attribute, a hard floor on the selected track attribute’s value can be provided. See tunable track attributes below for the list of available options. For example, min_tempo=140 would restrict results to only those tracks with a tempo of greater than 140 beats per minute.",
+                  "description": "OPTIONAL For each tunable track attribute, a hard floor on the selected track attribute’s value can be provided. See tunable track attributes below for the list of available options. For example, min_tempo=140 would restrict results to only those tracks with a tempo of greater than 140 beats per minute.",
                   "type": "Number"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "max_valence",
-                  "description": "For each tunable track attribute, a hard ceiling on the selected track attribute’s value can be provided. See tunable track attributes below for the list of available options. For example, max_instrumentalness=0.35 would filter out most tracks that are likely to be instrumental.",
+                  "description": "OPTIONAL For each tunable track attribute, a hard ceiling on the selected track attribute’s value can be provided. See tunable track attributes below for the list of available options. For example, max_instrumentalness=0.35 would filter out most tracks that are likely to be instrumental.",
                   "type": "Number"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "target_valence",
-                  "description": "For each of the tunable track attributes (below) a target value may be provided. Tracks with the attribute values nearest to the target values will be preferred. For example, you might request target_energy=0.6 and target_danceability=0.8. All target values will be weighed equally in ranking results.",
+                  "description": "OPTIONAL For each of the tunable track attributes (below) a target value may be provided. Tracks with the attribute values nearest to the target values will be preferred. For example, you might request target_energy=0.6 and target_danceability=0.8. All target values will be weighed equally in ranking results.",
                   "type": "Number"
                 }
               ]
@@ -878,7 +878,7 @@
                   "disabled": { "type": "boolean", "default": false },
                   "value": "",
                   "key": "Authorization",
-                  "description": "A valid user access token or your client credentials.",
+                  "description": "REQUIRED A valid user access token or your client credentials.",
                   "type": "String"
                 }
               ]
@@ -911,14 +911,14 @@
                   "disabled": { "type": "boolean", "default": false },
                   "value": "",
                   "key": "ids",
-                  "description": "A comma-separated list of the Spotify IDs for the episodes. Maximum: 50 IDs.",
+                  "description": "REQUIRED A comma-separated list of the Spotify IDs for the episodes. Maximum: 50 IDs.",
                   "type": "String"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "market",
-                  "description": "An ISO 3166-1 alpha-2 country code.\nIf a country code is specified, only shows and episodes that are available in that market will be returned.\nIf a valid user access token is specified in the request header, the country associated with\nthe user account will take priority over this parameter.\nNote: If neither market or user country are provided, the content is considered unavailable for the client.\nUsers can view the country that is associated with their account in the account settings.",
+                  "description": "OPTIONAL An ISO 3166-1 alpha-2 country code.\nIf a country code is specified, only shows and episodes that are available in that market will be returned.\nIf a valid user access token is specified in the request header, the country associated with\nthe user account will take priority over this parameter.\nNote: If neither market or user country are provided, the content is considered unavailable for the client.\nUsers can view the country that is associated with their account in the account settings.",
                   "type": "String"
                 }
               ]
@@ -946,7 +946,7 @@
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "market",
-                  "description": "An ISO 3166-1 alpha-2 country code.\nIf a country code is specified, only shows and episodes that are available in that market will be returned.\nIf a valid user access token is specified in the request header, the country associated with\nthe user account will take priority over this parameter.\nNote: If neither market or user country are provided, the content is considered unavailable for the client.\nUsers can view the country that is associated with their account in the account settings.",
+                  "description": "OPTIONAL An ISO 3166-1 alpha-2 country code.\nIf a country code is specified, only shows and episodes that are available in that market will be returned.\nIf a valid user access token is specified in the request header, the country associated with\nthe user account will take priority over this parameter.\nNote: If neither market or user country are provided, the content is considered unavailable for the client.\nUsers can view the country that is associated with their account in the account settings.",
                   "type": "String"
                 }
               ]
@@ -979,7 +979,7 @@
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "public",
-                  "description": "Defaults to true. If true the playlist will be included in user’s public playlists, if false it will remain private.\nTo be able to follow playlists privately, the user must have granted the playlist-modify-private scope.",
+                  "description": "OPTIONAL Defaults to true. If true the playlist will be included in user’s public playlists, if false it will remain private.\nTo be able to follow playlists privately, the user must have granted the playlist-modify-private scope.",
                   "type": "Boolean"
                 }
               ]
@@ -1007,7 +1007,7 @@
                   "disabled": { "type": "boolean", "default": false },
                   "value": "",
                   "key": "{playlist_id}",
-                  "description": "The Spotify ID of the playlist that is to be no longer followed.",
+                  "description": "REQUIRED The Spotify ID of the playlist that is to be no longer followed.",
                   "type": "String"
                 }
               ]
@@ -1041,7 +1041,7 @@
                   "disabled": { "type": "boolean", "default": false },
                   "value": "",
                   "key": "ids",
-                  "description": "A comma-separated list of Spotify User IDs ; the ids of the users that you want to check to see if they follow the playlist. Maximum: 5 ids.",
+                  "description": "REQUIRED A comma-separated list of Spotify User IDs ; the ids of the users that you want to check to see if they follow the playlist. Maximum: 5 ids.",
                   "type": "String"
                 }
               ]
@@ -1069,21 +1069,21 @@
                   "disabled": { "type": "boolean", "default": false },
                   "value": "",
                   "key": "type",
-                  "description": "The ID type: currently only artist is supported.",
+                  "description": "REQUIRED The ID type: currently only artist is supported.",
                   "type": "String"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "after",
-                  "description": "The last artist ID retrieved from the previous request.",
+                  "description": "OPTIONAL The last artist ID retrieved from the previous request.",
                   "type": "String"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "limit",
-                  "description": "The maximum number of items to return. Default: 20. Minimum: 1. Maximum: 50.",
+                  "description": "OPTIONAL The maximum number of items to return. Default: 20. Minimum: 1. Maximum: 50.",
                   "type": "Integer"
                 }
               ]
@@ -1111,7 +1111,7 @@
                   "disabled": { "type": "boolean", "default": false },
                   "value": "",
                   "key": "ids",
-                  "description": "A JSON array of the artist or user Spotify IDs.\nFor example: {ids:[\"74ASZWbe4lXaubB36ztrGX\", \"08td7MxkoHQkXnWAYD8d6Q\"]}. A maximum of 50 IDs can be sent in one request. Note: if the ids parameter is present in the query string, any IDs listed here in the body will be ignored.",
+                  "description": "REQUIRED A JSON array of the artist or user Spotify IDs.\nFor example: {ids:[\"74ASZWbe4lXaubB36ztrGX\", \"08td7MxkoHQkXnWAYD8d6Q\"]}. A maximum of 50 IDs can be sent in one request. Note: if the ids parameter is present in the query string, any IDs listed here in the body will be ignored.",
                   "type": "Array[String]"
                 }
               ]
@@ -1139,7 +1139,7 @@
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "ids",
-                  "description": "A JSON array of the artist or user Spotify IDs. For example: {ids:[\"74ASZWbe4lXaubB36ztrGX\", \"08td7MxkoHQkXnWAYD8d6Q\"]}. A maximum of 50 IDs can be sent in one request. Note: if the ids parameter is present in the query string, any IDs listed here in the body will be ignored.",
+                  "description": "OPTIONAL A JSON array of the artist or user Spotify IDs. For example: {ids:[\"74ASZWbe4lXaubB36ztrGX\", \"08td7MxkoHQkXnWAYD8d6Q\"]}. A maximum of 50 IDs can be sent in one request. Note: if the ids parameter is present in the query string, any IDs listed here in the body will be ignored.",
                   "type": "Array[String]"
                 }
               ]
@@ -1167,14 +1167,14 @@
                   "disabled": { "type": "boolean", "default": false },
                   "value": "",
                   "key": "type",
-                  "description": "The ID type: either artist or user.",
+                  "description": "REQUIRED The ID type: either artist or user.",
                   "type": "String"
                 },
                 {
                   "disabled": { "type": "boolean", "default": false },
                   "value": "",
                   "key": "ids",
-                  "description": "A comma-separated list of the artist or the user Spotify IDs to check. For example: ids=74ASZWbe4lXaubB36ztrGX,08td7MxkoHQkXnWAYD8d6Q. A maximum of 50 IDs can be sent in one request.",
+                  "description": "REQUIRED A comma-separated list of the artist or the user Spotify IDs to check. For example: ids=74ASZWbe4lXaubB36ztrGX,08td7MxkoHQkXnWAYD8d6Q. A maximum of 50 IDs can be sent in one request.",
                   "type": "String"
                 }
               ]
@@ -1207,21 +1207,21 @@
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "limit",
-                  "description": "The maximum number of objects to return. Default: 20. Minimum: 1. Maximum: 50.",
+                  "description": "OPTIONAL The maximum number of objects to return. Default: 20. Minimum: 1. Maximum: 50.",
                   "type": "Integer"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "offset",
-                  "description": "The index of the first object to return. Default: 0 (i.e., the first object). Use with limit to get the next set of objects.",
+                  "description": "OPTIONAL The index of the first object to return. Default: 0 (i.e., the first object). Use with limit to get the next set of objects.",
                   "type": "Integer"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "market",
-                  "description": "An ISO 3166-1 alpha-2 country code or the string from_token. Provide this parameter if you want to apply Track Relinking.",
+                  "description": "OPTIONAL An ISO 3166-1 alpha-2 country code or the string from_token. Provide this parameter if you want to apply Track Relinking.",
                   "type": "String"
                 }
               ]
@@ -1249,7 +1249,7 @@
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "ids",
-                  "description": "A JSON array of the Spotify IDs. For example: [\"4iV5W9uYEdYUVa79Axb7Rh\", \"1301WleyT98MSxVHPZCA6M\"]A maximum of 50 items can be specified in one request. Note: if the ids parameter is present in the query string, any IDs listed here in the body will be ignored.",
+                  "description": "OPTIONAL A JSON array of the Spotify IDs. For example: [\"4iV5W9uYEdYUVa79Axb7Rh\", \"1301WleyT98MSxVHPZCA6M\"]A maximum of 50 items can be specified in one request. Note: if the ids parameter is present in the query string, any IDs listed here in the body will be ignored.",
                   "type": "Array[String]"
                 }
               ]
@@ -1277,7 +1277,7 @@
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "ids",
-                  "description": "A JSON array of the Spotify IDs. For example: [\"4iV5W9uYEdYUVa79Axb7Rh\", \"1301WleyT98MSxVHPZCA6M\"]A maximum of 50 items can be specified in one request. Note: if the ids parameter is present in the query string, any IDs listed here in the body will be ignored.",
+                  "description": "OPTIONAL A JSON array of the Spotify IDs. For example: [\"4iV5W9uYEdYUVa79Axb7Rh\", \"1301WleyT98MSxVHPZCA6M\"]A maximum of 50 items can be specified in one request. Note: if the ids parameter is present in the query string, any IDs listed here in the body will be ignored.",
                   "type": "Array[String]"
                 }
               ]
@@ -1305,7 +1305,7 @@
                   "disabled": { "type": "boolean", "default": false },
                   "value": "",
                   "key": "ids",
-                  "description": "A comma-separated list of the Spotify IDs for the albums. Maximum: 50 IDs.",
+                  "description": "REQUIRED A comma-separated list of the Spotify IDs for the albums. Maximum: 50 IDs.",
                   "type": "String"
                 }
               ]
@@ -1333,21 +1333,21 @@
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "market",
-                  "description": "An ISO 3166-1 alpha-2 country code or the string from_token. Provide this parameter if you want to apply Track Relinking.",
+                  "description": "OPTIONAL An ISO 3166-1 alpha-2 country code or the string from_token. Provide this parameter if you want to apply Track Relinking.",
                   "type": "String"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "limit",
-                  "description": "The maximum number of objects to return. Default: 20. Minimum: 1. Maximum: 50.",
+                  "description": "OPTIONAL The maximum number of objects to return. Default: 20. Minimum: 1. Maximum: 50.",
                   "type": "Integer"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "offset",
-                  "description": "The index of the first object to return. Default: 0 (i.e., the first object). Use with limit to get the next set of objects.",
+                  "description": "OPTIONAL The index of the first object to return. Default: 0 (i.e., the first object). Use with limit to get the next set of objects.",
                   "type": "Integer"
                 }
               ]
@@ -1375,7 +1375,7 @@
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "ids",
-                  "description": "A JSON array of the Spotify IDs. For example: [\"4iV5W9uYEdYUVa79Axb7Rh\", \"1301WleyT98MSxVHPZCA6M\"]A maximum of 50 items can be specified in one request. Note: if the ids parameter is present in the query string, any IDs listed here in the body will be ignored.",
+                  "description": "OPTIONAL A JSON array of the Spotify IDs. For example: [\"4iV5W9uYEdYUVa79Axb7Rh\", \"1301WleyT98MSxVHPZCA6M\"]A maximum of 50 items can be specified in one request. Note: if the ids parameter is present in the query string, any IDs listed here in the body will be ignored.",
                   "type": "Array[String]"
                 }
               ]
@@ -1403,7 +1403,7 @@
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "ids",
-                  "description": "A JSON array of the Spotify IDs. For example: [\"4iV5W9uYEdYUVa79Axb7Rh\", \"1301WleyT98MSxVHPZCA6M\"]A maximum of 50 items can be specified in one request. Note: if the ids parameter is present in the query string, any IDs listed here in the body will be ignored.",
+                  "description": "OPTIONAL A JSON array of the Spotify IDs. For example: [\"4iV5W9uYEdYUVa79Axb7Rh\", \"1301WleyT98MSxVHPZCA6M\"]A maximum of 50 items can be specified in one request. Note: if the ids parameter is present in the query string, any IDs listed here in the body will be ignored.",
                   "type": "Array[String]"
                 }
               ]
@@ -1431,7 +1431,7 @@
                   "disabled": { "type": "boolean", "default": false },
                   "value": "",
                   "key": "ids",
-                  "description": "A comma-separated list of the Spotify IDs for the tracks. Maximum: 50 IDs.",
+                  "description": "REQUIRED A comma-separated list of the Spotify IDs for the tracks. Maximum: 50 IDs.",
                   "type": "String"
                 }
               ]
@@ -1459,21 +1459,21 @@
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "market",
-                  "description": "An ISO 3166-1 alpha-2 country code.\n  If a country code is specified, only episodes that are available in that market will be returned.\n  If a valid user access token is specified in the request header, the country associated with\n  the user account will take priority over this parameter.\n  Note: If neither market or user country are provided, the content is considered unavailable for the client.\n  Users can view the country that is associated with their account in the account settings.",
+                  "description": "OPTIONAL An ISO 3166-1 alpha-2 country code.\n  If a country code is specified, only episodes that are available in that market will be returned.\n  If a valid user access token is specified in the request header, the country associated with\n  the user account will take priority over this parameter.\n  Note: If neither market or user country are provided, the content is considered unavailable for the client.\n  Users can view the country that is associated with their account in the account settings.",
                   "type": "String"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "limit",
-                  "description": "The maximum number of objects to return. Default: 20. Minimum: 1. Maximum: 50.",
+                  "description": "OPTIONAL The maximum number of objects to return. Default: 20. Minimum: 1. Maximum: 50.",
                   "type": "Integer"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "offset",
-                  "description": "The index of the first object to return. Default: 0 (i.e., the first object). Use with limit to get the next set of objects.",
+                  "description": "OPTIONAL The index of the first object to return. Default: 0 (i.e., the first object). Use with limit to get the next set of objects.",
                   "type": "Integer"
                 }
               ]
@@ -1501,7 +1501,7 @@
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "ids",
-                  "description": "A JSON array of the Spotify IDs. A maximum of 50 items can be specified in one request. Note: if the ids parameter is present in the query string, any IDs listed here in the body will be ignored.",
+                  "description": "OPTIONAL A JSON array of the Spotify IDs. A maximum of 50 items can be specified in one request. Note: if the ids parameter is present in the query string, any IDs listed here in the body will be ignored.",
                   "type": "Array[String]"
                 }
               ]
@@ -1529,7 +1529,7 @@
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "ids",
-                  "description": "A JSON array of the Spotify IDs. A maximum of 50 items can be specified in one request. Note: if the ids parameter is present in the query string, any IDs listed here in the body will be ignored.",
+                  "description": "OPTIONAL A JSON array of the Spotify IDs. A maximum of 50 items can be specified in one request. Note: if the ids parameter is present in the query string, any IDs listed here in the body will be ignored.",
                   "type": "Array[String]"
                 }
               ]
@@ -1557,7 +1557,7 @@
                   "disabled": { "type": "boolean", "default": false },
                   "value": "",
                   "key": "ids",
-                  "description": "A comma-separated list of the Spotify IDs for the episodes. Maximum: 50 IDs.",
+                  "description": "REQUIRED A comma-separated list of the Spotify IDs for the episodes. Maximum: 50 IDs.",
                   "type": "String"
                 }
               ]
@@ -1585,14 +1585,14 @@
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "limit",
-                  "description": "The maximum number of shows to return. Default: 20. Minimum: 1. Maximum: 50",
+                  "description": "OPTIONAL The maximum number of shows to return. Default: 20. Minimum: 1. Maximum: 50",
                   "type": "Integer"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "offset",
-                  "description": "The index of the first show to return. Default: 0 (the first object). Use with limit to get the next set of shows.",
+                  "description": "OPTIONAL The index of the first show to return. Default: 0 (the first object). Use with limit to get the next set of shows.",
                   "type": "Integer"
                 }
               ]
@@ -1620,7 +1620,7 @@
                   "disabled": { "type": "boolean", "default": false },
                   "value": "",
                   "key": "ids",
-                  "description": "A comma-separated list of the Spotify IDs. Maximum: 50 IDs.",
+                  "description": "REQUIRED A comma-separated list of the Spotify IDs. Maximum: 50 IDs.",
                   "type": "String"
                 }
               ]
@@ -1648,14 +1648,14 @@
                   "disabled": { "type": "boolean", "default": false },
                   "value": "",
                   "key": "ids",
-                  "description": "A comma-separated list of Spotify IDs for the shows to be deleted from the user’s library.",
+                  "description": "REQUIRED A comma-separated list of Spotify IDs for the shows to be deleted from the user’s library.",
                   "type": "String"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "market",
-                  "description": "An ISO 3166-1 alpha-2 country code.\nIf a country code is specified, only shows that are available in that market will be removed.\nIf a valid user access token is specified in the request header, the country associated with\nthe user account will take priority over this parameter.\nNote: If neither market or user country are provided, the content is considered unavailable for the client.\nUsers can view the country that is associated with their account in the account settings.",
+                  "description": "OPTIONAL An ISO 3166-1 alpha-2 country code.\nIf a country code is specified, only shows that are available in that market will be removed.\nIf a valid user access token is specified in the request header, the country associated with\nthe user account will take priority over this parameter.\nNote: If neither market or user country are provided, the content is considered unavailable for the client.\nUsers can view the country that is associated with their account in the account settings.",
                   "type": "String"
                 }
               ]
@@ -1683,7 +1683,7 @@
                   "disabled": { "type": "boolean", "default": false },
                   "value": "",
                   "key": "ids",
-                  "description": "A comma-separated list of the Spotify IDs for the shows. Maximum: 50 ids.",
+                  "description": "REQUIRED A comma-separated list of the Spotify IDs for the shows. Maximum: 50 ids.",
                   "type": "String"
                 }
               ]
@@ -1716,7 +1716,7 @@
                   "disabled": { "type": "boolean", "default": false },
                   "value": "",
                   "key": "Authorization",
-                  "description": "A valid user access token or your client credentials.",
+                  "description": "REQUIRED A valid user access token or your client credentials.",
                   "type": "String"
                 }
               ]
@@ -1749,21 +1749,21 @@
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "time_range",
-                  "description": "Over what time frame the affinities are computed. Valid values: long_term (calculated from several years of data and including all new data as it becomes available), medium_term (approximately last 6 months), short_term (approximately last 4 weeks). Default: medium_term",
+                  "description": "OPTIONAL Over what time frame the affinities are computed. Valid values: long_term (calculated from several years of data and including all new data as it becomes available), medium_term (approximately last 6 months), short_term (approximately last 4 weeks). Default: medium_term",
                   "type": "String"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "limit",
-                  "description": "The number of entities to return. Default: 20. Minimum: 1. Maximum: 50. For example: limit=2",
+                  "description": "OPTIONAL The number of entities to return. Default: 20. Minimum: 1. Maximum: 50. For example: limit=2",
                   "type": "Integer"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "offset",
-                  "description": "The index of the first entity to return. Default: 0 (i.e., the first track). Use with limit to get the next set of entities.",
+                  "description": "OPTIONAL The index of the first entity to return. Default: 0 (i.e., the first track). Use with limit to get the next set of entities.",
                   "type": "Integer"
                 }
               ]
@@ -1796,14 +1796,14 @@
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "market",
-                  "description": "An ISO 3166-1 alpha-2 country code\nor the string from_token. Provide this parameter if you want to apply Track\nRelinking.",
+                  "description": "OPTIONAL An ISO 3166-1 alpha-2 country code\nor the string from_token. Provide this parameter if you want to apply Track\nRelinking.",
                   "type": "String"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "additional_types",
-                  "description": "A comma-separated list of item types that your client supports besides the default track type. Valid types are: track and episode. An unsupported type in the response is expected to be represented as null value in the item field.\nNote: This parameter was introduced to allow existing clients to maintain their current behaviour and might be deprecated in the future. In addition to providing this parameter, make sure that your client properly handles cases of new",
+                  "description": "OPTIONAL A comma-separated list of item types that your client supports besides the default track type. Valid types are: track and episode. An unsupported type in the response is expected to be represented as null value in the item field.\nNote: This parameter was introduced to allow existing clients to maintain their current behaviour and might be deprecated in the future. In addition to providing this parameter, make sure that your client properly handles cases of new",
                   "type": "String"
                 }
               ]
@@ -1831,14 +1831,14 @@
                   "disabled": { "type": "boolean", "default": false },
                   "value": "",
                   "key": "device_ids",
-                  "description": "A JSON array containing the ID of the device on which playback should be started/transferred.For example:{device_ids:[\"74ASZWbe4lXaubB36ztrGX\"]}Note: Although an array is accepted, only a single device_id is currently supported. Supplying more than one will return 400 Bad Request",
+                  "description": "REQUIRED A JSON array containing the ID of the device on which playback should be started/transferred.For example:{device_ids:[\"74ASZWbe4lXaubB36ztrGX\"]}Note: Although an array is accepted, only a single device_id is currently supported. Supplying more than one will return 400 Bad Request",
                   "type": "Array[String]"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "play",
-                  "description": "true: ensure playback happens on new device.false or not provided: keep the current playback state.",
+                  "description": "OPTIONAL true: ensure playback happens on new device.false or not provided: keep the current playback state.",
                   "type": "Boolean"
                 }
               ]
@@ -1866,7 +1866,7 @@
                   "disabled": { "type": "boolean", "default": false },
                   "value": "",
                   "key": "Authorization",
-                  "description": "A valid access token from the Spotify Accounts service:\nsee the Web API Authorization Guide\nfor details.  The access token must have been issued on behalf of a user.\nThe access token must have the user-read-playback-state scope authorized\nin order to read information.",
+                  "description": "REQUIRED A valid access token from the Spotify Accounts service:\nsee the Web API Authorization Guide\nfor details.  The access token must have been issued on behalf of a user.\nThe access token must have the user-read-playback-state scope authorized\nin order to read information.",
                   "type": "String"
                 }
               ]
@@ -1894,14 +1894,14 @@
                   "disabled": { "type": "boolean", "default": false },
                   "value": "",
                   "key": "market",
-                  "description": "An ISO 3166-1 alpha-2 country code\nor the string from_token. Provide this parameter if you want to apply Track\nRelinking.",
+                  "description": "REQUIRED An ISO 3166-1 alpha-2 country code\nor the string from_token. Provide this parameter if you want to apply Track\nRelinking.",
                   "type": "String"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "additional_types",
-                  "description": "A comma-separated list of item types that your client supports besides the default track type. Valid types are: track and episode. An unsupported type in the response is expected to be represented as null value in the item field.\nNote: This parameter was introduced to allow existing clients to maintain their current behaviour and might be deprecated in the future. In addition to providing this parameter, make sure that your client properly handles cases of new types in the future by checking against the currently_playing_type field.",
+                  "description": "OPTIONAL A comma-separated list of item types that your client supports besides the default track type. Valid types are: track and episode. An unsupported type in the response is expected to be represented as null value in the item field.\nNote: This parameter was introduced to allow existing clients to maintain their current behaviour and might be deprecated in the future. In addition to providing this parameter, make sure that your client properly handles cases of new types in the future by checking against the currently_playing_type field.",
                   "type": "String"
                 }
               ]
@@ -1929,28 +1929,28 @@
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "context_uri",
-                  "description": "string",
+                  "description": "OPTIONAL string",
                   "type": "String"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "uris",
-                  "description": "Array of URIs",
+                  "description": "OPTIONAL Array of URIs",
                   "type": "Array[String]"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "offset",
-                  "description": "object",
+                  "description": "OPTIONAL object",
                   "type": "Object"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "position_ms",
-                  "description": "integer",
+                  "description": "OPTIONAL integer",
                   "type": "Integer"
                 }
               ]
@@ -1978,7 +1978,7 @@
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "device_id",
-                  "description": "The id of the device this command is targeting. If not supplied, the user’s currently active device is the target.",
+                  "description": "OPTIONAL The id of the device this command is targeting. If not supplied, the user’s currently active device is the target.",
                   "type": "String"
                 }
               ]
@@ -2006,7 +2006,7 @@
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "device_id",
-                  "description": "The id of the device this command is targeting. If not supplied, the user’s currently active device is the target.",
+                  "description": "OPTIONAL The id of the device this command is targeting. If not supplied, the user’s currently active device is the target.",
                   "type": "String"
                 }
               ]
@@ -2034,7 +2034,7 @@
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "device_id",
-                  "description": "The id of the device this command is targeting. If\nnot supplied, the user’s currently active device is the target.",
+                  "description": "OPTIONAL The id of the device this command is targeting. If\nnot supplied, the user’s currently active device is the target.",
                   "type": "String"
                 }
               ]
@@ -2062,14 +2062,14 @@
                   "disabled": { "type": "boolean", "default": false },
                   "value": "",
                   "key": "position_ms",
-                  "description": "The position in milliseconds to seek to. Must be a\npositive number. Passing in a position that is greater than the length of\nthe track will cause the player to start playing the next song.",
+                  "description": "REQUIRED The position in milliseconds to seek to. Must be a\npositive number. Passing in a position that is greater than the length of\nthe track will cause the player to start playing the next song.",
                   "type": "Integer"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "device_id",
-                  "description": "The id of the device this command is targeting. If\nnot supplied, the user’s currently active device is the target.",
+                  "description": "OPTIONAL The id of the device this command is targeting. If\nnot supplied, the user’s currently active device is the target.",
                   "type": "String"
                 }
               ]
@@ -2097,14 +2097,14 @@
                   "disabled": { "type": "boolean", "default": false },
                   "value": "",
                   "key": "state",
-                  "description": "track, context or off.\ntrack will repeat the current track.\ncontext will repeat the current context.\noff will turn repeat off.",
+                  "description": "REQUIRED track, context or off.\ntrack will repeat the current track.\ncontext will repeat the current context.\noff will turn repeat off.",
                   "type": "String"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "device_id",
-                  "description": "The id of the device this command is targeting. If\nnot supplied, the user’s currently active device is the target.",
+                  "description": "OPTIONAL The id of the device this command is targeting. If\nnot supplied, the user’s currently active device is the target.",
                   "type": "String"
                 }
               ]
@@ -2132,14 +2132,14 @@
                   "disabled": { "type": "boolean", "default": false },
                   "value": "",
                   "key": "volume_percent",
-                  "description": "The volume to set. Must be a value from 0 to 100 inclusive.",
+                  "description": "REQUIRED The volume to set. Must be a value from 0 to 100 inclusive.",
                   "type": "Integer"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "device_id",
-                  "description": "The id of the device this command is targeting. If not supplied, the user’s currently active device is the target.",
+                  "description": "OPTIONAL The id of the device this command is targeting. If not supplied, the user’s currently active device is the target.",
                   "type": "String"
                 }
               ]
@@ -2167,14 +2167,14 @@
                   "disabled": { "type": "boolean", "default": false },
                   "value": "",
                   "key": "state",
-                  "description": "true : Shuffle user’s playback.\nfalse : Do not shuffle user’s playback.",
+                  "description": "REQUIRED true : Shuffle user’s playback.\nfalse : Do not shuffle user’s playback.",
                   "type": "Boolean"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "device_id",
-                  "description": "The id of the device this command is targeting. If\nnot supplied, the user’s currently active device is the target.",
+                  "description": "OPTIONAL The id of the device this command is targeting. If\nnot supplied, the user’s currently active device is the target.",
                   "type": "String"
                 }
               ]
@@ -2202,21 +2202,21 @@
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "limit",
-                  "description": "The maximum number of items to return. Default: 20. Minimum: 1. Maximum: 50.",
+                  "description": "OPTIONAL The maximum number of items to return. Default: 20. Minimum: 1. Maximum: 50.",
                   "type": "Integer"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "after",
-                  "description": "A Unix timestamp in milliseconds. Returns all items\nafter (but not including) this cursor position. If after is specified, before\nmust not be specified.",
+                  "description": "OPTIONAL A Unix timestamp in milliseconds. Returns all items\nafter (but not including) this cursor position. If after is specified, before\nmust not be specified.",
                   "type": "Integer"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "before",
-                  "description": "A Unix timestamp in milliseconds. Returns all items\nbefore (but not including) this cursor position. If before is specified,\nafter must not be specified.",
+                  "description": "OPTIONAL A Unix timestamp in milliseconds. Returns all items\nbefore (but not including) this cursor position. If before is specified,\nafter must not be specified.",
                   "type": "Integer"
                 }
               ]
@@ -2244,14 +2244,14 @@
                   "disabled": { "type": "boolean", "default": false },
                   "value": "",
                   "key": "uri",
-                  "description": "The uri of the item to add to the queue. Must be a track or an episode uri.",
+                  "description": "REQUIRED The uri of the item to add to the queue. Must be a track or an episode uri.",
                   "type": "String"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "device_id",
-                  "description": "The id of the device this command is targeting. If\nnot supplied, the user’s currently active device is the target.",
+                  "description": "OPTIONAL The id of the device this command is targeting. If\nnot supplied, the user’s currently active device is the target.",
                   "type": "String"
                 }
               ]
@@ -2284,14 +2284,14 @@
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "limit",
-                  "description": "‘The maximum number of playlists to return. Default:\n20. Minimum: 1. Maximum: 50.’",
+                  "description": "OPTIONAL ‘The maximum number of playlists to return. Default:\n20. Minimum: 1. Maximum: 50.’",
                   "type": "Integer"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "offset",
-                  "description": "‘The index of the first playlist to return. Default:\n0 (the first object). Maximum offset: 100.000. Use with limit to get the\nnext set of playlists.’",
+                  "description": "OPTIONAL ‘The index of the first playlist to return. Default:\n0 (the first object). Maximum offset: 100.000. Use with limit to get the\nnext set of playlists.’",
                   "type": "Integer"
                 }
               ]
@@ -2319,14 +2319,14 @@
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "limit",
-                  "description": "The maximum number of playlists to return. Default:\n20. Minimum: 1. Maximum: 50.",
+                  "description": "OPTIONAL The maximum number of playlists to return. Default:\n20. Minimum: 1. Maximum: 50.",
                   "type": "Integer"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "offset",
-                  "description": "The index of the first playlist to return. Default:\n0 (the first object). Maximum offset: 100.000. Use with limit to get the\nnext set of playlists.",
+                  "description": "OPTIONAL The index of the first playlist to return. Default:\n0 (the first object). Maximum offset: 100.000. Use with limit to get the\nnext set of playlists.",
                   "type": "Integer"
                 }
               ]
@@ -2354,28 +2354,28 @@
                   "disabled": { "type": "boolean", "default": false },
                   "value": "",
                   "key": "name",
-                  "description": "The name for the new playlist, for example \"Your Coolest Playlist\" . This name does not need to be unique; a user may have several playlists with the same name.",
+                  "description": "REQUIRED The name for the new playlist, for example \"Your Coolest Playlist\" . This name does not need to be unique; a user may have several playlists with the same name.",
                   "type": "String"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "public",
-                  "description": "Defaults to true . If true the playlist will be public, if false it will be private. To be able to create private playlists, the user must have granted the playlist-modify-private scope",
+                  "description": "OPTIONAL Defaults to true . If true the playlist will be public, if false it will be private. To be able to create private playlists, the user must have granted the playlist-modify-private scope",
                   "type": "Boolean"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "collaborative",
-                  "description": "Defaults to false . If true the playlist will be collaborative. Note that to create a collaborative playlist you must also set public to false . To create collaborative playlists you must have granted playlist-modify-private and playlist-modify-public scopes .",
+                  "description": "OPTIONAL Defaults to false . If true the playlist will be collaborative. Note that to create a collaborative playlist you must also set public to false . To create collaborative playlists you must have granted playlist-modify-private and playlist-modify-public scopes .",
                   "type": "Boolean"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "description",
-                  "description": "value for playlist description as displayed in Spotify Clients and in the Web API.",
+                  "description": "OPTIONAL value for playlist description as displayed in Spotify Clients and in the Web API.",
                   "type": "String"
                 }
               ]
@@ -2403,21 +2403,21 @@
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "market",
-                  "description": "An ISO 3166-1 alpha-2 country code\nor the string from_token. Provide this parameter if you want to apply Track\nRelinking.\nFor episodes, if a valid user access token is specified in the request header, the country associated with\nthe user account will take priority over this parameter.\nNote: If neither market or user country are provided, the episode is considered unavailable for the client.",
+                  "description": "OPTIONAL An ISO 3166-1 alpha-2 country code\nor the string from_token. Provide this parameter if you want to apply Track\nRelinking.\nFor episodes, if a valid user access token is specified in the request header, the country associated with\nthe user account will take priority over this parameter.\nNote: If neither market or user country are provided, the episode is considered unavailable for the client.",
                   "type": "String"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "fields",
-                  "description": "Filters for the query: a comma-separated list of the\nfields to return. If omitted, all fields are returned. For example, to get\njust the playlist’’s description and URI: fields=description,uri. A dot\nseparator can be used to specify non-reoccurring fields, while parentheses\ncan be used to specify reoccurring fields within objects. For example, to\nget just the added date and user ID of the adder: fields=tracks.items(added_at,added_by.id).\nUse multiple parentheses to drill down into nested objects, for example: fields=tracks.items(track(name,href,album(name,href))).\nFields can be excluded by prefixing them with an exclamation mark, for example:\nfields=tracks.items(track(name,href,album(!name,href)))",
+                  "description": "OPTIONAL Filters for the query: a comma-separated list of the\nfields to return. If omitted, all fields are returned. For example, to get\njust the playlist’’s description and URI: fields=description,uri. A dot\nseparator can be used to specify non-reoccurring fields, while parentheses\ncan be used to specify reoccurring fields within objects. For example, to\nget just the added date and user ID of the adder: fields=tracks.items(added_at,added_by.id).\nUse multiple parentheses to drill down into nested objects, for example: fields=tracks.items(track(name,href,album(name,href))).\nFields can be excluded by prefixing them with an exclamation mark, for example:\nfields=tracks.items(track(name,href,album(!name,href)))",
                   "type": "String"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "additional_types",
-                  "description": "A comma-separated list of item types that your client supports besides the default track type. Valid types are: track and episode.\nNote: This parameter was introduced to allow existing clients to maintain their current behaviour and might be deprecated in the future.\nIn addition to providing this parameter, make sure that your client properly handles cases of new types in the future by checking against the type field of each object.",
+                  "description": "OPTIONAL A comma-separated list of item types that your client supports besides the default track type. Valid types are: track and episode.\nNote: This parameter was introduced to allow existing clients to maintain their current behaviour and might be deprecated in the future.\nIn addition to providing this parameter, make sure that your client properly handles cases of new types in the future by checking against the type field of each object.",
                   "type": "String"
                 }
               ]
@@ -2445,28 +2445,28 @@
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "name",
-                  "description": "The new name for the playlist, for example \"My New Playlist Title\"",
+                  "description": "OPTIONAL The new name for the playlist, for example \"My New Playlist Title\"",
                   "type": "String"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "public",
-                  "description": "If true the playlist will be public, if false it will be private.",
+                  "description": "OPTIONAL If true the playlist will be public, if false it will be private.",
                   "type": "Boolean"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "collaborative",
-                  "description": "If true , the playlist will become collaborative and other users will be able to modify the playlist in their Spotify client. Note: You can only set collaborative to true on non-public playlists.",
+                  "description": "OPTIONAL If true , the playlist will become collaborative and other users will be able to modify the playlist in their Spotify client. Note: You can only set collaborative to true on non-public playlists.",
                   "type": "Boolean"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "description",
-                  "description": "Value for playlist description as displayed in Spotify Clients and in the Web API.",
+                  "description": "OPTIONAL Value for playlist description as displayed in Spotify Clients and in the Web API.",
                   "type": "String"
                 }
               ]
@@ -2494,35 +2494,35 @@
                   "disabled": { "type": "boolean", "default": false },
                   "value": "",
                   "key": "market",
-                  "description": "An ISO 3166-1 alpha-2 country code\nor the string from_token. Provide this parameter if you want to apply Track\nRelinking.\nFor episodes, if a valid user access token is specified in the request header, the country associated with\nthe user account will take priority over this parameter.\nNote: If neither market or user country are provided, the episode is considered unavailable for the client.",
+                  "description": "REQUIRED An ISO 3166-1 alpha-2 country code\nor the string from_token. Provide this parameter if you want to apply Track\nRelinking.\nFor episodes, if a valid user access token is specified in the request header, the country associated with\nthe user account will take priority over this parameter.\nNote: If neither market or user country are provided, the episode is considered unavailable for the client.",
                   "type": "String"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "fields",
-                  "description": "Filters for the query: a comma-separated list of the\nfields to return. If omitted, all fields are returned. For example, to get\njust the total number of items and the request limit:fields=total,limitA\ndot separator can be used to specify non-reoccurring fields, while parentheses\ncan be used to specify reoccurring fields within objects. For example, to\nget just the added date and user ID of the adder:fields=items(added_at,added_by.id)Use\nmultiple parentheses to drill down into nested objects, for example:fields=items(track(name,href,album(name,href)))Fields\ncan be excluded by prefixing them with an exclamation mark, for example:fields=items.track.album(!external_urls,images)",
+                  "description": "OPTIONAL Filters for the query: a comma-separated list of the\nfields to return. If omitted, all fields are returned. For example, to get\njust the total number of items and the request limit:fields=total,limitA\ndot separator can be used to specify non-reoccurring fields, while parentheses\ncan be used to specify reoccurring fields within objects. For example, to\nget just the added date and user ID of the adder:fields=items(added_at,added_by.id)Use\nmultiple parentheses to drill down into nested objects, for example:fields=items(track(name,href,album(name,href)))Fields\ncan be excluded by prefixing them with an exclamation mark, for example:fields=items.track.album(!external_urls,images)",
                   "type": "String"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "limit",
-                  "description": "The maximum number of items to return. Default: 100.\nMinimum: 1. Maximum: 100.",
+                  "description": "OPTIONAL The maximum number of items to return. Default: 100.\nMinimum: 1. Maximum: 100.",
                   "type": "Integer"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "offset",
-                  "description": "The index of the first item to return. Default: 0\n(the first object).",
+                  "description": "OPTIONAL The index of the first item to return. Default: 0\n(the first object).",
                   "type": "Integer"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "additional_types",
-                  "description": "A comma-separated list of item types that your client supports besides the default track type. Valid types are: track and episode.\nNote: This parameter was introduced to allow existing clients to maintain their current behaviour and might be deprecated in the future.\nIn addition to providing this parameter, make sure that your client properly handles cases of new types in the future by checking against the type field of each object.",
+                  "description": "OPTIONAL A comma-separated list of item types that your client supports besides the default track type. Valid types are: track and episode.\nNote: This parameter was introduced to allow existing clients to maintain their current behaviour and might be deprecated in the future.\nIn addition to providing this parameter, make sure that your client properly handles cases of new types in the future by checking against the type field of each object.",
                   "type": "String"
                 }
               ]
@@ -2550,14 +2550,14 @@
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "uris",
-                  "description": "A JSON array of the Spotify URIs to add. For example: {\"uris\": [\"spotify:track:4iV5W9uYEdYUVa79Axb7Rh\",\"spotify:track:1301WleyT98MSxVHPZCA6M\", \"spotify:episode:512ojhOuo1ktJprKbVcKyQ\"]}A maximum of 100 items can be added in one request. Note: if the uris parameter is present in the query string, any URIs listed here in the body will be ignored.",
+                  "description": "OPTIONAL A JSON array of the Spotify URIs to add. For example: {\"uris\": [\"spotify:track:4iV5W9uYEdYUVa79Axb7Rh\",\"spotify:track:1301WleyT98MSxVHPZCA6M\", \"spotify:episode:512ojhOuo1ktJprKbVcKyQ\"]}A maximum of 100 items can be added in one request. Note: if the uris parameter is present in the query string, any URIs listed here in the body will be ignored.",
                   "type": "Array[String]"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "position",
-                  "description": "The position to insert the items, a zero-based index. For example, to insert the items in the first position: position=0 ; to insert the items in the third position: position=2. If omitted, the items will be appended to the playlist. Items are added in the order they appear in the uris array. For example: {\"uris\": [\"spotify:track:4iV5W9uYEdYUVa79Axb7Rh\",\"spotify:track:1301WleyT98MSxVHPZCA6M\"], \"position\": 3}",
+                  "description": "OPTIONAL The position to insert the items, a zero-based index. For example, to insert the items in the first position: position=0 ; to insert the items in the third position: position=2. If omitted, the items will be appended to the playlist. Items are added in the order they appear in the uris array. For example: {\"uris\": [\"spotify:track:4iV5W9uYEdYUVa79Axb7Rh\",\"spotify:track:1301WleyT98MSxVHPZCA6M\"], \"position\": 3}",
                   "type": "Integer"
                 }
               ]
@@ -2585,35 +2585,35 @@
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "uris",
-                  "description": "",
+                  "description": "OPTIONAL ",
                   "type": "Array[String]"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "range_start",
-                  "description": "The position of the first item to be reordered.",
+                  "description": "OPTIONAL The position of the first item to be reordered.",
                   "type": "Integer"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "insert_before",
-                  "description": "The position where the items should be inserted.To reorder the items to the end of the playlist, simply set insert_before to the position after the last item.Examples:To reorder the first item to the last position in a playlist with 10 items, set range_start to 0, and insert_before to 10.To reorder the last item in a playlist with 10 items to the start of the playlist, set range_start to 9, and insert_before to 0.",
+                  "description": "OPTIONAL The position where the items should be inserted.To reorder the items to the end of the playlist, simply set insert_before to the position after the last item.Examples:To reorder the first item to the last position in a playlist with 10 items, set range_start to 0, and insert_before to 10.To reorder the last item in a playlist with 10 items to the start of the playlist, set range_start to 9, and insert_before to 0.",
                   "type": "Integer"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "range_length",
-                  "description": "The amount of items to be reordered. Defaults to 1 if not set.The range of items to be reordered begins from the range_start position, and includes the range_length subsequent items.Example:To move the items at index 9-10 to the start of the playlist, range_start is set to 9, and range_length is set to 2.",
+                  "description": "OPTIONAL The amount of items to be reordered. Defaults to 1 if not set.The range of items to be reordered begins from the range_start position, and includes the range_length subsequent items.Example:To move the items at index 9-10 to the start of the playlist, range_start is set to 9, and range_length is set to 2.",
                   "type": "Integer"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "snapshot_id",
-                  "description": "The playlist’s snapshot ID against which you want to make the changes.",
+                  "description": "OPTIONAL The playlist’s snapshot ID against which you want to make the changes.",
                   "type": "String"
                 }
               ]
@@ -2641,14 +2641,14 @@
                   "disabled": { "type": "boolean", "default": false },
                   "value": "",
                   "key": "tracks",
-                  "description": "An array of objects containing Spotify URIs of the tracks or episodes to remove.\nFor example: { \"tracks\": [{ \"uri\": \"spotify:track:4iV5W9uYEdYUVa79Axb7Rh\" },{ \"uri\": \"spotify:track:1301WleyT98MSxVHPZCA6M\" }] }. A maximum of 100 objects can be sent at once.",
+                  "description": "REQUIRED An array of objects containing Spotify URIs of the tracks or episodes to remove.\nFor example: { \"tracks\": [{ \"uri\": \"spotify:track:4iV5W9uYEdYUVa79Axb7Rh\" },{ \"uri\": \"spotify:track:1301WleyT98MSxVHPZCA6M\" }] }. A maximum of 100 objects can be sent at once.",
                   "type": "Array[String]"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "snapshot_id",
-                  "description": "The playlist’s snapshot ID against which you want to make the changes.\nThe API will validate that the specified items exist and in the specified positions and make the changes,\neven if more recent changes have been made to the playlist.",
+                  "description": "OPTIONAL The playlist’s snapshot ID against which you want to make the changes.\nThe API will validate that the specified items exist and in the specified positions and make the changes,\neven if more recent changes have been made to the playlist.",
                   "type": "String"
                 }
               ]
@@ -2676,7 +2676,7 @@
                   "disabled": { "type": "boolean", "default": false },
                   "value": "",
                   "key": "{playlist_id}",
-                  "description": "The Spotify ID\nfor the playlist.",
+                  "description": "REQUIRED The Spotify ID\nfor the playlist.",
                   "type": "String"
                 }
               ]
@@ -2704,7 +2704,7 @@
                   "disabled": { "type": "boolean", "default": false },
                   "value": "",
                   "key": "{playlist_id}",
-                  "description": "The Spotify ID\nfor the playlist.",
+                  "description": "REQUIRED The Spotify ID\nfor the playlist.",
                   "type": "String"
                 }
               ]
@@ -2737,42 +2737,42 @@
                   "disabled": { "type": "boolean", "default": false },
                   "value": "",
                   "key": "q",
-                  "description": "Search query\nkeywords and optional field filters and operators. For example: q=roadhouse%20blues.",
+                  "description": "REQUIRED Search query\nkeywords and optional field filters and operators. For example: q=roadhouse%20blues.",
                   "type": "String"
                 },
                 {
                   "disabled": { "type": "boolean", "default": false },
                   "value": "",
                   "key": "type",
-                  "description": "A comma-separated list of item types to search\nacross. Valid types are: album , artist, playlist, track, show and episode.\nSearch results include hits from all the specified item types. For\nexample: q=name:abacab&type=album,track returns both albums and tracks\nwith “abacab” included in their name.",
+                  "description": "REQUIRED A comma-separated list of item types to search\nacross. Valid types are: album , artist, playlist, track, show and episode.\nSearch results include hits from all the specified item types. For\nexample: q=name:abacab&type=album,track returns both albums and tracks\nwith “abacab” included in their name.",
                   "type": "String"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "market",
-                  "description": "An ISO 3166-1 alpha-2 country code\nor the string from_token. If a country code is specified, only content that is playable in that market is returned.\nNote: - Playlist results are not affected by the market parameter.\n- If market is set to from_token, and a valid access token is specified\nin the request header, only content playable in the country associated with\nthe user account, is returned. - Users can view the country that is associated\nwith their account in the account settings.\nA user must grant access to the user-read-private scope prior to when the\naccess token is issued.",
+                  "description": "OPTIONAL An ISO 3166-1 alpha-2 country code\nor the string from_token. If a country code is specified, only content that is playable in that market is returned.\nNote: - Playlist results are not affected by the market parameter.\n- If market is set to from_token, and a valid access token is specified\nin the request header, only content playable in the country associated with\nthe user account, is returned. - Users can view the country that is associated\nwith their account in the account settings.\nA user must grant access to the user-read-private scope prior to when the\naccess token is issued.",
                   "type": "String"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "limit",
-                  "description": "Maximum number of results to return. Default:\n20 Minimum: 1 Maximum: 50 Note: The limit is applied within\neach type, not on the total response. For example, if the limit value\nis 3 and the type is artist,album, the response contains 3 artists and 3\nalbums.",
+                  "description": "OPTIONAL Maximum number of results to return. Default:\n20 Minimum: 1 Maximum: 50 Note: The limit is applied within\neach type, not on the total response. For example, if the limit value\nis 3 and the type is artist,album, the response contains 3 artists and 3\nalbums.",
                   "type": "Integer"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "offset",
-                  "description": "The index of the first result to return. Default:\n0 (the first result). Maximum offset (including limit): 1,000. Use\nwith limit to get the next page of search results.",
+                  "description": "OPTIONAL The index of the first result to return. Default:\n0 (the first result). Maximum offset (including limit): 1,000. Use\nwith limit to get the next page of search results.",
                   "type": "Integer"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "include_external",
-                  "description": "Possible values: audio If include_external=audio\nis specified the response will include any relevant audio content that is\nhosted externally. By default external content is filtered out from responses.",
+                  "description": "OPTIONAL Possible values: audio If include_external=audio\nis specified the response will include any relevant audio content that is\nhosted externally. By default external content is filtered out from responses.",
                   "type": "String"
                 }
               ]
@@ -2805,14 +2805,14 @@
                   "disabled": { "type": "boolean", "default": false },
                   "value": "",
                   "key": "ids",
-                  "description": "A comma-separated list of the Spotify IDs for the shows. Maximum: 50 IDs.",
+                  "description": "REQUIRED A comma-separated list of the Spotify IDs for the shows. Maximum: 50 IDs.",
                   "type": "String"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "market",
-                  "description": "An ISO 3166-1 alpha-2 country code.\nIf a country code is specified, only shows and episodes that are available in that market will be returned.\nIf a valid user access token is specified in the request header, the country associated with\nthe user account will take priority over this parameter.\nNote: If neither market or user country are provided, the content is considered unavailable for the client.\nUsers can view the country that is associated with their account in the account settings.",
+                  "description": "OPTIONAL An ISO 3166-1 alpha-2 country code.\nIf a country code is specified, only shows and episodes that are available in that market will be returned.\nIf a valid user access token is specified in the request header, the country associated with\nthe user account will take priority over this parameter.\nNote: If neither market or user country are provided, the content is considered unavailable for the client.\nUsers can view the country that is associated with their account in the account settings.",
                   "type": "String"
                 }
               ]
@@ -2840,7 +2840,7 @@
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "market",
-                  "description": "An ISO 3166-1 alpha-2 country code.\nIf a country code is specified, only shows and episodes that are available in that market will be returned.\nIf a valid user access token is specified in the request header, the country associated with\nthe user account will take priority over this parameter.\nNote: If neither market or user country are provided, the content is considered unavailable for the client.\nUsers can view the country that is associated with their account in the account settings.",
+                  "description": "OPTIONAL An ISO 3166-1 alpha-2 country code.\nIf a country code is specified, only shows and episodes that are available in that market will be returned.\nIf a valid user access token is specified in the request header, the country associated with\nthe user account will take priority over this parameter.\nNote: If neither market or user country are provided, the content is considered unavailable for the client.\nUsers can view the country that is associated with their account in the account settings.",
                   "type": "String"
                 }
               ]
@@ -2868,21 +2868,21 @@
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "market",
-                  "description": "An ISO 3166-1 alpha-2 country code.\nIf a country code is specified, only shows and episodes that are available in that market will be returned.\nIf a valid user access token is specified in the request header, the country associated with\nthe user account will take priority over this parameter.\nNote: If neither market or user country are provided, the content is considered unavailable for the client.\nUsers can view the country that is associated with their account in the account settings.",
+                  "description": "OPTIONAL An ISO 3166-1 alpha-2 country code.\nIf a country code is specified, only shows and episodes that are available in that market will be returned.\nIf a valid user access token is specified in the request header, the country associated with\nthe user account will take priority over this parameter.\nNote: If neither market or user country are provided, the content is considered unavailable for the client.\nUsers can view the country that is associated with their account in the account settings.",
                   "type": "String"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "limit",
-                  "description": "The maximum number of episodes to return. Default: 20. Minimum: 1. Maximum: 50.",
+                  "description": "OPTIONAL The maximum number of episodes to return. Default: 20. Minimum: 1. Maximum: 50.",
                   "type": "Integer"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "offset",
-                  "description": "The index of the first episode to return. Default: 0 (the first object). Use with limit to get the next set of episodes.",
+                  "description": "OPTIONAL The index of the first episode to return. Default: 0 (the first object). Use with limit to get the next set of episodes.",
                   "type": "Integer"
                 }
               ]
@@ -2915,14 +2915,14 @@
                   "disabled": { "type": "boolean", "default": false },
                   "value": "",
                   "key": "ids",
-                  "description": "A comma-separated list of the Spotify IDs for the tracks. Maximum: 50 IDs.",
+                  "description": "REQUIRED A comma-separated list of the Spotify IDs for the tracks. Maximum: 50 IDs.",
                   "type": "String"
                 },
                 {
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "market",
-                  "description": "An ISO 3166-1 alpha-2 country code or the string from_token. Provide this parameter if you want to apply Track Relinking.",
+                  "description": "OPTIONAL An ISO 3166-1 alpha-2 country code or the string from_token. Provide this parameter if you want to apply Track Relinking.",
                   "type": "String"
                 }
               ]
@@ -2950,7 +2950,7 @@
                   "disabled": { "type": "boolean", "default": true },
                   "value": "",
                   "key": "market",
-                  "description": "An ISO 3166-1 alpha-2 country code\nor the string from_token. Provide this parameter if you want to apply Track\nRelinking.",
+                  "description": "OPTIONAL An ISO 3166-1 alpha-2 country code\nor the string from_token. Provide this parameter if you want to apply Track\nRelinking.",
                   "type": "String"
                 }
               ]
@@ -2978,7 +2978,7 @@
                   "disabled": { "type": "boolean", "default": false },
                   "value": "",
                   "key": "ids",
-                  "description": "A comma-separated list of the Spotify IDs\nfor the tracks. Maximum: 100 IDs.",
+                  "description": "REQUIRED A comma-separated list of the Spotify IDs\nfor the tracks. Maximum: 100 IDs.",
                   "type": "String"
                 }
               ]
@@ -3006,7 +3006,7 @@
                   "disabled": { "type": "boolean", "default": false },
                   "value": "",
                   "key": "{id}",
-                  "description": "The Spotify ID for the track.",
+                  "description": "REQUIRED The Spotify ID for the track.",
                   "type": "String"
                 }
               ]
@@ -3034,7 +3034,7 @@
                   "disabled": { "type": "boolean", "default": false },
                   "value": "",
                   "key": "{id}",
-                  "description": "The Spotify ID\nfor the track.",
+                  "description": "REQUIRED The Spotify ID\nfor the track.",
                   "type": "String"
                 }
               ]
@@ -3067,7 +3067,7 @@
                   "disabled": { "type": "boolean", "default": false },
                   "value": "",
                   "key": "Authorization",
-                  "description": "A valid access token from the Spotify Accounts service: see the Web API Authorization Guide for details. The access token must have been issued on behalf of the current user.Reading the user’s email address requires the user-read-email scope; reading country, product subscription level and explicit content settings requires the user-read-private scope. See Using Scopes.",
+                  "description": "REQUIRED A valid access token from the Spotify Accounts service: see the Web API Authorization Guide for details. The access token must have been issued on behalf of the current user.Reading the user’s email address requires the user-read-email scope; reading country, product subscription level and explicit content settings requires the user-read-private scope. See Using Scopes.",
                   "type": "String"
                 }
               ]
@@ -3095,7 +3095,7 @@
                   "disabled": { "type": "boolean", "default": false },
                   "value": "",
                   "key": "{user_id}",
-                  "description": "The user’s Spotify user ID.",
+                  "description": "REQUIRED The user’s Spotify user ID.",
                   "type": "String"
                 }
               ]

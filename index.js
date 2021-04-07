@@ -88,9 +88,15 @@ function table_destructor(table) {
                     break
                 case 1:
                     query.type = $(column).text()
+                    break
                 case 2:
-                    if($(column).text().toLowerCase() == 'optional') query.disabled.default = true
-                    else query.disabled.default = false
+                    if($(column).text().toLowerCase() == 'optional'){
+                        query.disabled.default = true
+                        query.description = `OPTIONAL ${query.description}`
+                    } else {
+                        query.disabled.default = false
+                        query.description = `REQUIRED ${query.description}`
+                    } 
                     break
             }
         })
