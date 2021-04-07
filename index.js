@@ -7,7 +7,6 @@ const base_info = {
     info: {
         name: "Spotify",
         schema: "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
-        item: [ ]
     }
 }
 let page = fs.readFileSync('working.html')
